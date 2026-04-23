@@ -274,6 +274,7 @@ docker run -d --shm-size=2g botbrowser:latest ...
 ## Next Steps
 
 - [Headless Server Setup](HEADLESS_SERVER_SETUP.md). Bare-metal Ubuntu deployment without Docker.
+- [Linux GPU Backend Selection](LINUX_GPU_BACKEND.md). Choose the right Mesa or SwiftShader path inside containers, with a Dockerfile fragment for Mesa llvmpipe.
 - [Performance Optimization](PERFORMANCE_OPTIMIZATION.md). Tune resource usage for production workloads.
 - [Playwright Guide](../getting-started/PLAYWRIGHT.md). Integrate with Playwright for automation.
 - [CLI Flags Reference](../../../CLI_FLAGS.md). Complete list of all available flags.

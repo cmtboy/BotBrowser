@@ -100,6 +100,7 @@ These guides cover everything from initial setup to advanced deployment scenario
 |-------|-------------|
 | [Headless Server Setup](deployment/HEADLESS_SERVER_SETUP.md) | Set up headless Ubuntu servers for stable production BotBrowser automation. |
 | [Docker Deployment](deployment/DOCKER_DEPLOYMENT.md) | Deploy BotBrowser in Docker for reproducible, isolated automation environments. |
+| [Linux GPU Backend Selection](deployment/LINUX_GPU_BACKEND.md) | Choose the right Linux software rendering backend to keep WebGL1/WebGL2/WebGPU available with stable performance. |
 | [Performance Optimization](deployment/PERFORMANCE_OPTIMIZATION.md) | Tune startup speed, memory usage, and throughput for high-scale workloads. |
 | [Screenshot Best Practices](deployment/SCREENSHOT_BEST_PRACTICES.md) | Capture stable screenshots across headless and headful environments. |
 | [Mirror Distributed](deployment/MIRROR_DISTRIBUTED.md) | Run distributed sessions with synchronized actions and consistent fingerprint output. |
