@@ -224,7 +224,7 @@ For complete CLI flags documentation, see [CLI Flags Reference](../CLI_FLAGS.md)
 - **Keep profiles updated** with the latest Chrome versions
 - **Test thoroughly** before production deployment
 
-Related guides: [Profile Management](../docs/guides/getting-started/PROFILE_MANAGEMENT.md), [Cross-Platform Profiles](../docs/guides/platform/CROSS_PLATFORM_PROFILES.md), [Playwright](../docs/guides/getting-started/PLAYWRIGHT.md), [Puppeteer](../docs/guides/getting-started/PUPPETEER.md)
+Related guides: [Profile Management](https://botbrowser.io/docs/getting-started/profile-management/), [Cross-Platform Profiles](https://botbrowser.io/docs/platform/cross-platform-profiles/), [Playwright](https://botbrowser.io/docs/getting-started/playwright/), [Puppeteer](https://botbrowser.io/docs/getting-started/puppeteer/)
 
 ---
 

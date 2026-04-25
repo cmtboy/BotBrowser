@@ -341,7 +341,7 @@ See [CLI_FLAGS.md](CLI_FLAGS.md) for the complete flag reference.
 
 ## Related Documentation
 
-- [Guides](docs/guides/) - Comprehensive guides for all BotBrowser features
+- [Guides](https://botbrowser.io/docs/) - Comprehensive guides for all BotBrowser features
 - [CLI Flags Reference](CLI_FLAGS.md)
 - [Advanced Features](ADVANCED_FEATURES.md)
 - [Profile Configuration](profiles/PROFILE_CONFIGS.md)
@@ -350,7 +350,7 @@ See [CLI_FLAGS.md](CLI_FLAGS.md) for the complete flag reference.
 - [Per-Context Proxy Example (Puppeteer)](examples/puppeteer/per_context_proxy.js)
 - [Per-Context Proxy Example (Playwright)](examples/playwright/nodejs/per_context_proxy.js)
 
-Related guides: [Multi-Account Isolation](docs/guides/identity/MULTI_ACCOUNT_ISOLATION.md), [Per-Context Proxy](docs/guides/network/PER_CONTEXT_PROXY.md), [Dynamic Proxy Switching](docs/guides/network/DYNAMIC_PROXY_SWITCHING.md)
+Related guides: [Multi-Account Isolation](https://botbrowser.io/docs/identity/multi-account-isolation/), [Per-Context Proxy](https://botbrowser.io/docs/network/per-context-proxy/), [Dynamic Proxy Switching](https://botbrowser.io/docs/network/dynamic-proxy-switching/)
 
 ---
 
