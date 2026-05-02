@@ -3,6 +3,14 @@
 > **Research scope:** Entries in this changelog describe features evaluated in authorized labs and defensive benchmarking programs. Follow the [Legal Disclaimer](DISCLAIMER.md) and [Responsible Use Guidelines](RESPONSIBLE_USE.md). We work with security vendors to investigate any misuse, so report concerns to [support@botbrowser.io](mailto:support@botbrowser.io).
 
 
+## [2026-05-02]
+### Major
+- **Chromium Core → 147.0.7727.139**: Updated to Chrome 147 stable (147.0.7727.139). Web Platform consistency, rendering accuracy, and security patches stay aligned with upstream Chrome.
+
+### Improvements
+- **GeoIP Database Upgrade**: Geolocation database now uses multi-source fusion for improved coverage and accuracy across residential, mobile, and datacenter IP ranges.
+
+
 ## [2026-05-01]
 ### Major
 - **Chromium Core → 147.0.7727.138**: Updated to Chrome 147 stable (147.0.7727.138). Web Platform consistency, rendering accuracy, and security patches stay aligned with upstream Chrome.
