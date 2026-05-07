@@ -339,6 +339,10 @@ See [CLI_FLAGS.md](CLI_FLAGS.md) for the complete flag reference.
 
 ⚠️ Each context can load a completely different profile (`--bot-profile`), or use `--bot-config-*` flags to override specific settings from the browser's base profile.
 
+## High-Concurrency Tuning
+
+When running many per-context fingerprints under one browser instance (for example, 20+ concurrent BrowserContexts), launch with [`--bot-gpu-emulation=priority`](CLI_FLAGS.md#--bot-gpu-emulation) to prioritize GPU and WebGPU command-buffer scheduling across sibling contexts. Default behavior is unchanged; this is an opt-in mode for high-concurrency workloads. See [`--bot-gpu-emulation` modes](docs/guides/deployment/LINUX_GPU_BACKEND.md#gpu-emulation-modes).
+
 ## Related Documentation
 
 - [Guides](https://botbrowser.io/docs/) - Comprehensive guides for all BotBrowser features

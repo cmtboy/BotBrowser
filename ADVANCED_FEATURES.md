@@ -137,7 +137,7 @@ Consistent behavior across execution modes.
 - Full GPU context simulation without physical GPU
 - WebGL and WebGPU rendering consistency
 - Hardware-accelerated video decoding simulation
-- Automatic GPU rendering backend selection on Linux via [`--bot-gpu-emulation`](CLI_FLAGS.md#--bot-gpu-emulation). Detects and prefers system GPU/GL drivers when available, with shader caching enabled by default. For backend choice and flag migration on Linux servers, see [Linux GPU Backend Selection](https://botbrowser.io/docs/deployment/linux-gpu-backend/)
+- Automatic GPU rendering backend selection on Linux via [`--bot-gpu-emulation`](CLI_FLAGS.md#--bot-gpu-emulation). Detects and prefers system GPU/GL drivers when available, with shader caching enabled by default. Optional `--bot-gpu-emulation=priority` adds prioritized GPU/WebGPU command-buffer scheduling for high-concurrency BrowserContext workloads. For backend choice and flag migration on Linux servers, see [Linux GPU Backend Selection](https://botbrowser.io/docs/deployment/linux-gpu-backend/)
 
 **Incognito-Mode Consistency:**
 - Fingerprint protection maintained in incognito mode

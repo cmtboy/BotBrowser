@@ -435,7 +435,7 @@ Runtime toggles that don’t rely on profile `configs` but still override behavi
 - `--bot-stack-seed` (ENT Tier2): Controls JavaScript recursive call stack depth across main thread, Worker, and WASM contexts. Accepts `profile` (match profile’s exact depth), `real` (use native depth), or a positive integer seed (1-UINT32_MAX) for per-session depth variation. Guide: [Stack Depth Fingerprinting](https://botbrowser.io/docs/fingerprint/stack-depth/)
 - `--bot-network-info-override`: Enable profile-defined `navigator.connection` values (`rtt`, `downlink`, `effectiveType`, `saveData`) and corresponding Client Hints headers (`RTT`, `Downlink`, `ECT`, `Save-Data`). Disabled by default. Guide: [Navigator Properties](https://botbrowser.io/docs/fingerprint/navigator-properties/)
 <a id="--bot-gpu-emulation"></a>
-- `--bot-gpu-emulation` (ENT Tier2, default true): Controls GPU rendering backend selection on Linux. Automatically detects and prefers system GPU/GL drivers when available for optimal performance. Set `--bot-gpu-emulation=false` to use your own GPU or GL driver directly. Guide: [Linux GPU Backend Selection](https://botbrowser.io/docs/deployment/linux-gpu-backend/)
+- `--bot-gpu-emulation` (ENT Tier2, default `true`): Controls GPU emulation mode. Accepts `false` (disabled), `true` (standard mode, historical default), or `priority` (opt-in mode that adds prioritized GPU/WebGPU scheduling for high-concurrency workloads). Set `--bot-gpu-emulation=false` to use your own GPU or GL driver directly. Guide: [Linux GPU Backend Selection](https://botbrowser.io/docs/deployment/linux-gpu-backend/)
 
 Example tracking probe BotBrowser avoids when console forwarding stays disabled:
 

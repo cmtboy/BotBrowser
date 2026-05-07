@@ -165,6 +165,34 @@ Flags you keep:
 - All `--bot-*` flags, including `--bot-profile`, `--bot-noise-seed`, `--bot-webrtc-ice`, `--bot-inject-random-history`, etc.
 - `--proxy-server`, `--proxy-ip`, `--user-data-dir`
 
+<a id="gpu-emulation-modes"></a>
+
+### `--bot-gpu-emulation` modes
+
+`--bot-gpu-emulation` accepts three values:
+
+| Value | Behavior |
+|-------|----------|
+| `false` | Disable BotBrowser's GPU emulation. Hand WebGL rendering to the real GL driver (Mesa llvmpipe via ANGLE GL on Linux). Recommended for the Linux software-rendering path described above. |
+| `true` (default) | Standard emulation mode. Historical default and unchanged. |
+| `priority` | Standard emulation plus prioritized GPU/WebGPU command-buffer scheduling. Opt-in mode for workloads running many concurrent BrowserContexts under one browser instance, where GPU work from sibling contexts can otherwise stall latency-sensitive challenges. |
+
+When to use `priority`:
+
+- Running high-concurrency automation (for example, one browser instance with 20+ per-context fingerprints under residential proxies) and observing GPU/WebGPU work delays affecting interactive challenges.
+- Default behavior is unchanged. Existing setups continue to use the standard `true` mode unless they explicitly opt in.
+
+```bash
+chromium-browser \
+    --headless \
+    --no-sandbox \
+    --use-angle=gl \
+    --bot-gpu-emulation=priority \
+    --bot-profile="/path/to/profile.enc"
+```
+
+Combine with the Linux software-rendering setup as needed: `priority` operates on the GPU scheduler layer and is independent from the GL backend selection. If you have already moved to `--bot-gpu-emulation=false` for Mesa llvmpipe, you do not need `priority` because the real GL driver handles GPU work directly.
+
 <a id="docker-deployment"></a>
 
 ### Docker deployment

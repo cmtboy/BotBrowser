@@ -3,6 +3,11 @@
 > **Research scope:** Entries in this changelog describe features evaluated in authorized labs and defensive benchmarking programs. Follow the [Legal Disclaimer](DISCLAIMER.md) and [Responsible Use Guidelines](RESPONSIBLE_USE.md). We work with security vendors to investigate any misuse, so report concerns to [support@botbrowser.io](mailto:support@botbrowser.io).
 
 
+## [2026-05-07]
+### New
+- **GPU Emulation Priority Mode (`--bot-gpu-emulation=priority`)**: New opt-in `priority` mode for `--bot-gpu-emulation` that prioritizes GPU and WebGPU scheduling, keeping workloads responsive when running many concurrent browser contexts. Default behavior remains unchanged; opt in with `--bot-gpu-emulation=priority`.
+
+
 ## [2026-05-05]
 ### Major
 - **Chromium Core → 148.0.7778.97**: Updated to Chrome 148 Early Stable Release (148.0.7778.97). Web Platform consistency, rendering accuracy, and security patches stay aligned with upstream Chrome.

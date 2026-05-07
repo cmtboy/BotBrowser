@@ -51,7 +51,7 @@ BotBrowser performance is influenced by several factors:
 
 3. **GPU rendering.** On servers without a physical GPU, BotBrowser automatically selects the best available software rendering backend. If your system has GPU or GL drivers installed (e.g., Mesa on Linux), BotBrowser will use them for better performance. Otherwise it falls back to its built-in software renderer. You can control this with [`--bot-gpu-emulation`](../../../CLI_FLAGS.md#--bot-gpu-emulation) (ENT Tier2). For Linux-specific backend selection (Mesa llvmpipe vs SwiftShader vs lavapipe) and the flags to remove when migrating off `--disable-gpu`, see [Linux GPU Backend Selection](LINUX_GPU_BACKEND.md).
 
-4. **Browser contexts.** Creating multiple BrowserContexts within a single browser process is more efficient than launching separate browser instances. Each context can have its own fingerprint via Per-Context Fingerprint (ENT Tier3).
+4. **Browser contexts.** Creating multiple BrowserContexts within a single browser process is more efficient than launching separate browser instances. Each context can have its own fingerprint via Per-Context Fingerprint (ENT Tier3). For workloads running many concurrent BrowserContexts under one browser, opt in to `--bot-gpu-emulation=priority` to prioritize GPU and WebGPU command-buffer scheduling across sibling contexts. See [`--bot-gpu-emulation` modes](LINUX_GPU_BACKEND.md#gpu-emulation-modes).
 
 ---
 
