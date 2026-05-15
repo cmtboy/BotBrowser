@@ -299,7 +299,6 @@ For detailed, measured performance data, see [BENCHMARK.md](BENCHMARK.md). Key f
 ### Ongoing Studies
 
 **Advanced Tracking Techniques:**
-- WebGPU tracking research
 - Machine learning-based tracking
 - Behavioral biometric analysis
 - Network-level tracking

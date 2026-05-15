@@ -106,7 +106,7 @@ This skips per-page IP lookups and speeds up navigation.
 
 ⚠️ Important:
 - Browser-level proxy: use `--proxy-server` for protected geo-detection across contexts
-- [Per-context proxy](PER_CONTEXT_FINGERPRINT.md) (ENT Tier1): set different proxies via `createBrowserContext({ proxy })`; BotBrowser auto-derives geo info in both cases. Guide: [Per-Context Proxy](https://botbrowser.io/docs/network/per-context-proxy/)
+- [Per-context proxy](PER_CONTEXT_FINGERPRINT.md) (ENT Tier1): set different proxies via `createBrowserContext({ proxyServer })` or `BotBrowser.setBrowserContextFlags` with `--proxy-server`; BotBrowser auto-derives geo info in both cases. Guide: [Per-Context Proxy](https://botbrowser.io/docs/network/per-context-proxy/)
 - Avoid: framework-specific options like `page.authenticate()` that disable BotBrowser's geo-detection, which may leak location information
 
 <a id="--proxy-bypass-rgx"></a>
@@ -228,14 +228,14 @@ Guide: [Bookmark Seeding](https://botbrowser.io/docs/identity/bookmark-seeding/)
 ### `--bot-canvas-record-file`
 Canvas forensics and tracking analysis.
 
-Records all Canvas 2D, WebGL, and WebGL2 API calls to a JSONL file for forensic analysis and replay.
+Records all Canvas 2D, WebGL, WebGL2, and WebGPU API calls to a JSONL file for forensic analysis and replay.
 
 ```bash
 --bot-canvas-record-file="/tmp/canvaslab.jsonl"
 ```
 
 **Key Features:**
-- Complete Canvas 2D, WebGL, and WebGL2 API call recording with full parameter serialization
+- Complete Canvas 2D, WebGL, WebGL2, and WebGPU API call recording with full parameter serialization
 - Deterministic capture (noise variance disabled during recording)
 - JSONL format for easy parsing and analysis
 - HTML replay viewer with WebGL enum reverse-lookup and source location mapping

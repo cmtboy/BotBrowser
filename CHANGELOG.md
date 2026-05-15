@@ -3,6 +3,15 @@
 > **Research scope:** Entries in this changelog describe features evaluated in authorized labs and defensive benchmarking programs. Follow the [Legal Disclaimer](DISCLAIMER.md) and [Responsible Use Guidelines](RESPONSIBLE_USE.md). We work with security vendors to investigate any misuse, so report concerns to [support@botbrowser.io](mailto:support@botbrowser.io).
 
 
+## [2026-05-15]
+### Major
+- **Chromium Core → 148.0.7778.168**: Updated to Chrome 148 stable (148.0.7778.168). Web Platform consistency, rendering accuracy, and security patches stay aligned with upstream Chrome.
+
+### Improvements
+- **Per-Context Proxy Stability**: `setBrowserContextFlags` now preserves the context proxy route when a later call only supplies `--proxy-ip`. Existing proxies configured via `Target.createBrowserContext` stay active, and explicit `--proxy-server` overrides still replace the route for new targets.
+- **Canvas Fingerprint Replay**: Full WebGPU canvas recording and kernel-side replay are now production-ready. Canvas operations across 2D, WebGL, and WebGPU are recorded, matched by operation hash at runtime, and returned from profile data rather than live GPU execution.
+
+
 ## [2026-05-09]
 ### Major
 - **Chromium Core → 148.0.7778.120**: Updated to Chrome 148 stable (148.0.7778.120). Web Platform consistency, rendering accuracy, and security patches stay aligned with upstream Chrome.

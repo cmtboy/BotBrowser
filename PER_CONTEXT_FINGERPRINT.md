@@ -204,7 +204,7 @@ await Promise.all([
 
 Pass the proxy via context creation options, and set `--proxy-ip` via CDP to skip IP lookups.
 
-> **Note**: Puppeteer uses `proxyServer`, Playwright uses `proxy: { server }`. See [examples/](examples/) for framework-specific syntax.
+> **Note**: Puppeteer uses `proxyServer`, Playwright uses `proxy: { server }`. See [examples/](examples/) for framework-specific syntax. `--proxy-ip` only updates the exit IP for geo-detection. When calling `setBrowserContextFlags` with only `--proxy-ip` (no `--proxy-server`), the proxy routing set via `createBrowserContext({ proxyServer })` is preserved.
 
 ```javascript
 // Puppeteer example
@@ -338,6 +338,8 @@ See [CLI_FLAGS.md](CLI_FLAGS.md) for the complete flag reference.
 ⚠️ Some network-layer settings ([`--bot-local-dns`](CLI_FLAGS.md#--bot-local-dns-ent-tier1), UDP proxy support) apply at the browser level and cannot be configured per-context.
 
 ⚠️ Each context can load a completely different profile (`--bot-profile`), or use `--bot-config-*` flags to override specific settings from the browser's base profile.
+
+⚠️ Proxy merge semantics are explicit: `--proxy-server` in `botbrowserFlags` sets or replaces the context proxy route, while `--proxy-ip` only supplies the exit IP for geo-detection. If a context was created with `createBrowserContext({ proxyServer })`, a later `setBrowserContextFlags` call with only `--proxy-ip` preserves that proxy route.
 
 ## High-Concurrency Tuning
 
