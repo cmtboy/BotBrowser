@@ -3,6 +3,13 @@
 > **Research scope:** Entries in this changelog describe features evaluated in authorized labs and defensive benchmarking programs. Follow the [Legal Disclaimer](DISCLAIMER.md) and [Responsible Use Guidelines](RESPONSIBLE_USE.md). We work with security vendors to investigate any misuse, so report concerns to [support@botbrowser.io](mailto:support@botbrowser.io).
 
 
+## [2026-05-17]
+### Improvements
+- **Cross-Origin Frame Consistency**: Permission state in cross-origin frames now aligns with real Chrome behavior.
+- **Canvas Replay Stability**: Canvas fingerprint replay is now stable across text rendering paths.
+- **Trimmed Build Performance**: Trimmed Build on Linux x64 delivers further reductions in context creation time and CPU usage.
+
+
 ## [2026-05-15]
 ### Major
 - **Chromium Core → 148.0.7778.168**: Updated to Chrome 148 stable (148.0.7778.168). Web Platform consistency, rendering accuracy, and security patches stay aligned with upstream Chrome.
